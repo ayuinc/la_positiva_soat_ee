@@ -41,11 +41,11 @@ class Mandrillapp {
 	$mandrill = new Mandrill('IUGxsICy9KnL1OiDYwd0qA');
 
 	$nombre= $TMPL->fetch_param('nombre');
-	echo "<br>mail cliente ".$to= $TMPL->fetch_param('to');
+	$mail_cliente = $TMPL->fetch_param('to');
 	$telefono= $TMPL->fetch_param('telefono');
 	$name= "La Positiva Seguros";
 	$subject= "SOAT La Positiva";
-	$from= "lineapositiva@lapositiva.com.pe";
+	$from = "lineapositiva@lapositiva.com.pe";
 	//$text = $TMPL->tagdata;
 	
 	$text = "Hola ".$nombre."<br>
@@ -58,7 +58,7 @@ class Mandrillapp {
 	    'subject' => $subject,
 	    'from_email' => $from,
 	    'html' => $text,
-	    'to' => array(array('email' => $to, 'name' => $name)),
+	    'to' => array(array('email' => $mail_cliente, 'name' => $name)),
 	    'merge_vars' => array(array(
 		        'rcpt' => 'recipient1@domain.com',
 		        'vars' =>
@@ -94,10 +94,10 @@ class Mandrillapp {
 	require_once 'mailchimp-mandrill-api-php/src/Mandrill.php'; 
 	$mandrill = new Mandrill('IUGxsICy9KnL1OiDYwd0qA');
 
-	$nombre= $TMPL->fetch_param('nombre');
-	echo "<br>to: ".$to= $TMPL->fetch_param('to');
-	echo "<br> tel admin: ".$telefono= $TMPL->fetch_param('telefono');
-	$email_cliente= $TMPL->fetch_param('email_cliente');
+	$nombre= $TMPL->fetch_param('nombre'); 	
+	$telefono= $TMPL->fetch_param('telefono');
+	//$email_cliente= $TMPL->fetch_param('email_cliente');
+	$email_cliente= "gms122@gmail.com"
 	$name= "La Positiva Seguros";
 	$subject= "SOAT La Positiva";
 	$from= "lineapositiva@lapositiva.com.pe";
@@ -120,7 +120,7 @@ class Mandrillapp {
 	    'subject' => $subject,
 	    'from_email' => $from,
 	    'html' => $text,
-	    'to' => array(array('email' => $to, 'name' => $name)),
+	    'to' => array(array('email' => $mail_cliente, 'name' => $name)),
 	    'merge_vars' => array(array(
 		        'rcpt' => 'recipient1@domain.com',
 		        'vars' =>
