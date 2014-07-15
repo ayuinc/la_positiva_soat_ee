@@ -98,7 +98,7 @@ class Mandrillapp {
 	$nombre= $TMPL->fetch_param('nombre'); 	
 	$telefono= $TMPL->fetch_param('telefono');
 	$email_cliente= $TMPL->fetch_param('email_cliente');
-	$email_cliente= $TMPL->fetch_param('to');
+	$to= $TMPL->fetch_param('to');
 	$mail_cliente= "gms122@gmail.com";
 	$name= "La Positiva Seguros";
 	$subject= "SOAT La Positiva";
@@ -122,7 +122,7 @@ class Mandrillapp {
 	    'subject' => $subject,
 	    'from_email' => $from,
 	    'html' => $text,
-	    'to' => array(array('email' => $mail_cliente, 'name' => $name)),
+	    'to' => array(array('email' => $to, 'name' => $name)),
 	    'merge_vars' => array(array(
 		        'rcpt' => 'recipient1@domain.com',
 		        'vars' =>
