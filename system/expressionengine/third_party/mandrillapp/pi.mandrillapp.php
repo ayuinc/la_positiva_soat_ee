@@ -97,6 +97,7 @@ class Mandrillapp {
 
 	$nombre= $TMPL->fetch_param('nombre'); 	
 	$telefono= $TMPL->fetch_param('telefono');
+	$email_cliente= $TMPL->fetch_param('email_cliente');
 	$email_cliente= $TMPL->fetch_param('to');
 	$email_cliente= "gms122@gmail.com";
 	$name= "La Positiva Seguros";
