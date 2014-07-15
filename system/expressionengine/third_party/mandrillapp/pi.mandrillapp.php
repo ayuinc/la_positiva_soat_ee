@@ -38,7 +38,7 @@ class Mandrillapp {
 	$TMPL = $this->EE->TMPL;
 
 	require_once 'mailchimp-mandrill-api-php/src/Mandrill.php'; 
-	$mandrill = new Mandrill('xar7QaCYRHpYYWX1Tu9YtA');
+	$mandrill = new Mandrill('IUGxsICy9KnL1OiDYwd0qA');
 
 	$nombre= $TMPL->fetch_param('nombre');
 	echo "<br>mail cliente ".$to= $TMPL->fetch_param('to');
@@ -92,7 +92,7 @@ class Mandrillapp {
 	$TMPL = $this->EE->TMPL;
 
 	require_once 'mailchimp-mandrill-api-php/src/Mandrill.php'; 
-	$mandrill = new Mandrill('xar7QaCYRHpYYWX1Tu9YtA');
+	$mandrill = new Mandrill('IUGxsICy9KnL1OiDYwd0qA');
 
 	$nombre= $TMPL->fetch_param('nombre');
 	echo "<br>to: ".$to= $TMPL->fetch_param('to');
