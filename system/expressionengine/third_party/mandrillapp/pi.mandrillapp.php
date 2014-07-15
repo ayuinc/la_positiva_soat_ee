@@ -41,8 +41,7 @@ class Mandrillapp {
 	$mandrill = new Mandrill('IUGxsICy9KnL1OiDYwd0qA');
 
 	$nombre= $TMPL->fetch_param('nombre');
-	$email_cliente= $TMPL->fetch_param('to');
-	$mail_cliente= "gms122@gmail.com";
+	$to= $TMPL->fetch_param('to');
 	$telefono= $TMPL->fetch_param('telefono');
 	$name= "La Positiva Seguros";
 	$subject= "SOAT La Positiva";
@@ -59,7 +58,7 @@ class Mandrillapp {
 	    'subject' => $subject,
 	    'from_email' => $from,
 	    'html' => $text,
-	    'to' => array(array('email' => $mail_cliente, 'name' => $name)),
+	    'to' => array(array('email' => $to, 'name' => $name)),
 	    'merge_vars' => array(array(
 		        'rcpt' => 'recipient1@domain.com',
 		        'vars' =>
@@ -97,15 +96,14 @@ class Mandrillapp {
 
 	$nombre= $TMPL->fetch_param('nombre'); 	
 	$telefono= $TMPL->fetch_param('telefono');
-	$email_cliente= $TMPL->fetch_param('email_cliente');
 	$to= $TMPL->fetch_param('to');
-	$mail_cliente= "gms122@gmail.com";
+	$mail_cliente= $TMPL->fetch_param('mail_cliente');
 	$name= "La Positiva Seguros";
 	$subject= "SOAT La Positiva";
 	$from= "lineapositiva@lapositiva.com.pe";
 	//$text = $TMPL->tagdata;
 	
-	echo $text = "Estimados<br>
+	$text = "Estimados<br>
 	La siguiente persona a solicitado ser contactada para comprar el SOAT La Positiva.
 	<br>
 	Nombre: ".$nombre."<br>
