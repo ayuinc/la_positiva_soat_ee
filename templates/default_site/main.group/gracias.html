@@ -1,0 +1,19 @@
+
+{exp:freeform:entries parse="inward" form_id="2" orderby="entry_id" sort="desc" status="open" limit="1" }
+
+ {exp:mandrillapp:send_email_fulfill_form
+ 	 nombre="{freeform:field:first_name}"
+ 	 to="{freeform:field:email}"
+ 	 telefono="{freeform:field:telefono}"
+ {/exp:mandrillapp:send_email_fulfill_form}
+
+ {exp:mandrillapp:send_email_admin_form
+ 	 nombre="{freeform:field:first_name}"
+ 	 to="rodulfojprieto@gmail.com"
+ 	 email_cliente="{freeform:field:email}"
+ 	 telefono="{freeform:field:telefono}"
+ {/exp:mandrillapp:send_email_admin_form}
+
+{/exp:freeform:entries}
+
+Muchas gracias por tu interés en SOAT la Positiva. En breve te estaremos contactando para completar el proceso de venta.

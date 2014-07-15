@@ -1,0 +1,10 @@
+
+{exp:freeform:entries form_id="2" orderby="entry_id" sort="desc" status="open" limit="1" }
+ {exp:mandrillapp:send_email_admin_form
+ 	 nombre="{freeform:field:first_name}"
+ 	 to="rodulfojprieto@gmail.com"
+ 	 email_cliente="{freeform:field:email}"
+ 	 telefono="{freeform:field:telefono}"
+ {/exp:mandrillapp:send_email_admin_form}  
+{/exp:freeform:entries}
+
