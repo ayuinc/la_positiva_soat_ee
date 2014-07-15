@@ -97,7 +97,7 @@ class Mandrillapp {
 	$nombre= $TMPL->fetch_param('nombre'); 	
 	$telefono= $TMPL->fetch_param('telefono');
 	$to= $TMPL->fetch_param('to');
-	$mail_cliente= $TMPL->fetch_param('mail_cliente');
+	$email_cliente= $TMPL->fetch_param('email_cliente');
 	$name= "La Positiva Seguros";
 	$subject= "SOAT La Positiva";
 	$from= "lineapositiva@lapositiva.com.pe";
