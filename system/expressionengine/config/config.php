@@ -39,6 +39,7 @@ $config['cookie_httponly'] = 'y';
 |
 */
 $config['csrf_protection'] = FALSE;
+$config['secure_forms'] = "n";
 $config['uri_protocol']	= 'AUTO';
 
 /*
