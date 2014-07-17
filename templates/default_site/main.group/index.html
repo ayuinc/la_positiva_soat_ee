@@ -365,6 +365,45 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <div class="row">
+        <div id="agencias" class="medium-9 large-9 columns left-section hide-for-small-only">
+            <div class="row">
+                <div id="head" class="large-11 large-offset-1 columns">
+                    <h2 class="orange">AGENCIAS</h2>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <p class="marketing locate">UBICA EL PUNTO DE VENTA MÁS CERCANO</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <form id="locate-form" action="#">
+                        <input type="hidden" name="XID" value="{XID_HASH}" /> 
+                        <div class="large-6 columns">
+                            <span class="selector">
+                                   {exp:filtros:region}
+                            </span>
+                        </div>
+                        <div class="large-6 columns">
+                            <span class="selector">
+                                <select name="distrito" id="distrito">
+                                   {exp:filtros:district region="@@@"}
+                                </select>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div id="result" class="large-12 columns">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> b47cf502b53f70d0153fa12cfebe5575cfb4c26c
      <div id="buy" class="reveal-modal small" data-reveal>
       {exp:freeform:form form_name="contacto_soat" return="main/gracias" required="first_name|email|telefono" form:data-abide=""}
         <p class="orange">danos tus datos y en breve te contactaremos para completar el proceso de compra</p>
