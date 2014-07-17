@@ -39,9 +39,9 @@ $config['cookie_httponly'] = 'y';
 |
 */
 $config['global_xss_filtering'] = FALSE;
-$config['csrf_protection'] = FALSE;
+$config['disable_csrf_protection'] = "y";
 $config['compress_output'] = FALSE;
-$config['secure_forms'] = "n";
+$config["secure_forms"] = "n"; 
 $config['uri_protocol']	= 'AUTO';
 
 /*
