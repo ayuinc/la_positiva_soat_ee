@@ -371,27 +371,28 @@
                 <div id="head" class="large-11 large-offset-1 columns">
                     <h2 class="orange">AGENCIAS</h2>
                 </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <p class="marketing locate">UBICA EL PUNTO DE VENTA MÁS CERCANO</p>
+                <div class="large-11 large-offset-1 columns">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <p class="marketing locate">UBICA EL PUNTO DE VENTA MÁS CERCANO</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <form id="locate-form" action="#">
-                        <input type="hidden" name="XID" value="{XID_HASH}" /> 
-                        <div class="large-6 columns">
+                    <div class="row">
+                        <form id="locate-form" action="#">
+                        <div class="large-5 columns">
                             <span class="selector">
                                    {exp:filtros:region}
                             </span>
                         </div>
-                        <div class="large-6 columns">
+                        <div id="info-winners" class="large-7 columns">
                             <span class="selector">
                                 <select name="distrito" id="distrito">
                                    {exp:filtros:district region="@@@"}
                                 </select>
                             </span>
                         </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
                 <div class="row">
                     <div id="result" class="large-12 columns">
@@ -490,6 +491,56 @@
         });
 
         $(function() {
+          $( "#distrito" ).change(function (evt) {
+          var str = "";
+          $( "#distrito option:selected" ).each(function() {
+          str = $( this ).val();
+          if(str=='DISTRITO'){
+          }
+          else{
+          str = str.replace(/-/gi," ");
+          str = "distrito="+str;
+          evt.preventDefault();
+          $.ajax({
+                 type: "POST",
+                 url: "/?/content/agencia/",
+                 data: str, // serializes the form's elements.
+                 success: function(response)
+                 { // show response from the php script.
+                   $('#result').html(response);
+                 }
+               });
+          }
+          });
+          });
+
+          $( "#region" ).change(function (evt) {
+            var str = "";
+            $('#distrito option:eq(0)').prop('selected', true);
+            $( "#region option:selected" ).each(function() {
+              str = $( this ).val();
+              if(str=='REGIÓN'){
+                $('#distrito option:eq(0)').prop('selected', true);
+              }
+              else{
+              str = str.replace(/-/gi," ");
+              str = "region="+str;
+              evt.preventDefault();
+              $.ajax({
+                     type: "POST",
+                     url: "/?/content/distrito/",
+                     data: str, // serializes the form's elements.
+                     success: function(response)
+                     { // show response from the php script.
+                       $('#distrito').html(response);
+                       $('#distrito').prop('disabled', false);
+                       /*$('#loading').css('visibility', 'hidden');*/
+                     }
+                   });
+              }
+            });
+          });
+            
           $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
               var target = $(this.hash);
