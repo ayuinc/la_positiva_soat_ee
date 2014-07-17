@@ -46,6 +46,7 @@
                     <li><a href="#acerca-de-mobile">ACERCA DE LA PROMOCIÓN</a></li>
                     <li><a href="#formas-participar-mobile">FORMAS DE PARTICIPAR</a></li>
                     <li><a href="#ganadores-mobile">GANADORES</a></li>
+                    <li><a href="#agenias-mobile">AGENCIAS</a></li>
                     <li><a href="http://www.vsi.lapositiva.com.pe/Chat/chat.php" target="_blank">CHAT</a></li>
                   </ul>
                 </aside>
@@ -138,6 +139,7 @@
                         <li><a href="#acerca-de">ACERCA DE LA PROMOCIÓN</a></li>
                         <li><a href="#formas-participar">FORMAS DE PARTICIPAR</a></li>
                         <li><a href="#ganadores">GANADORES</a></li>
+                        <li><a href="#agencias">AGENCIAS</a></li>
                     </ul>
                 </div>
             </div>
@@ -503,7 +505,7 @@
           evt.preventDefault();
           $.ajax({
                  type: "POST",
-                 url: "/?/content/agencia/",
+                 url: "/?/main/agencia/",
                  data: str, // serializes the form's elements.
                  success: function(response)
                  { // show response from the php script.
@@ -528,7 +530,7 @@
               evt.preventDefault();
               $.ajax({
                      type: "POST",
-                     url: "/?/content/distrito/",
+                     url: "/?/main/distrito/",
                      data: str, // serializes the form's elements.
                      success: function(response)
                      { // show response from the php script.
