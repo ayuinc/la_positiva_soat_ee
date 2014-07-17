@@ -392,20 +392,32 @@
         <div id="agencias" class="medium-9 large-9 columns left-section hide-for-small-only">
             <div class="row">
                 <div id="head" class="large-11 large-offset-1 columns">
-                    <h2 class="orange">GANADORES</h2>
+                    <h2 class="orange">AGENCIAS</h2>
                 </div>
-
-                <div class="large-11 large-offset-1 columns">
-                    <div class="row">
-                        <div class="large-5 columns">
-                            <p class="orange">AUN NO TENEMOS AL <span>PRIMER GANADOR</span></p>
-                            <p class="gray"><span>PRIMER SORTEO:</span></p>
-                            <p class="orange">25 de <span>AGOSTO</span> del 2014</p>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <p class="marketing locate">UBICA EL PUNTO DE VENTA MÁS CERCANO</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <form id="locate-form" action="#">
+                        <input type="hidden" name="XID" value="{XID_HASH}" /> 
+                        <div class="large-6 columns">
+                            <span class="selector">
+                                   {exp:filtros:region}
+                            </span>
                         </div>
-                        <div id="info-winners" class="large-7 columns">
-                            <img class="car" src="img/white.png" alt="">
-                            <p class="orange vim">¡NUNCA GANARSE UN <span>AUTO CERO KILÓMETROS HA SIDO TAN FÁCIL!</span></p>
+                        <div class="large-6 columns">
+                            <span class="selector">
+                                <select name="distrito" id="distrito">
+                                   {exp:filtros:district region="@@@"}
+                                </select>
+                            </span>
                         </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div id="result" class="large-12 columns">
                     </div>
                 </div>
             </div>
