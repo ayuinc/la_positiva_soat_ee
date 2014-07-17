@@ -16,4 +16,31 @@
 
  {/exp:freeform:entries}
 
-Muchas gracias por tu interés en SOAT la Positiva. En breve te estaremos contactando para completar el proceso de venta.
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <title>SOAT La Positiva Gracias</title>
+    <link rel="stylesheet" href="{site_url}css/app.css" />
+    <link rel="stylesheet" href="{site_url}css/soat.css" />
+    <link rel="stylesheet" href="https://www.packvehicular.com/css/custom.css" />
+</head>
+<section id="fifth-section">
+  <div class="row">
+    {exp:freeform:entries parse="inward" form_id="2" orderby="entry_id" sort="desc" status="open" limit="1" }
+      <div class="large-8 large-centered medium-10 medium-centered small-10 small-centered text-center columns">
+        <h1>¡GRACIAS {freeform:field:first_name}!</h1>
+        <p class="thanks-msg">TU SOLICITUD HA SIDO ENVIADA A:</p>
+        <p class="thanks-email">{freeform:field:email}</p>
+      </div>
+      <div class="large-8 large-centered medium-10 medium-centered small-10 small-centered text-center columns">
+          <p class="thanks-2nd-msg">EN BREVE TE ESTAREMOS CONTACTANDO PARA COMPLETAR EL PROCESO DE VENTA. MUCHAS GRACIAS.</p>
+      </div>
+      <br>
+      <div class="large-5 large-centered medium-6 medium-centered small-10 small-centered text-center columns">
+        <a href="{site_url}" class="button button-orange">REGRESAR</a>
+      </div> 
+    {/exp:freeform:entries}           
+  </div>
+</section>
+</html>
