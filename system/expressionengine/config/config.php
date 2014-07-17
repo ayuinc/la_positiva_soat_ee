@@ -38,7 +38,9 @@ $config['cookie_httponly'] = 'y';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
+$config['global_xss_filtering'] = FALSE;
 $config['csrf_protection'] = FALSE;
+$config['compress_output'] = FALSE;
 $config['secure_forms'] = "n";
 $config['uri_protocol']	= 'AUTO';
 
